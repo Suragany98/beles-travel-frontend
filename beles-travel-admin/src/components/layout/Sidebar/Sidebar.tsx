@@ -12,6 +12,7 @@ import {
   UserOutlined,
   MessageOutlined,
   SettingOutlined,
+  TeamOutlined,
 } from '@ant-design/icons';
 
 const { Sider } = Layout;
@@ -59,6 +60,11 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
       key: '/messages',
       icon: <MessageOutlined />,
       label: 'Сообщения',
+    },
+    {
+      key: '/users',
+      icon: <TeamOutlined />,
+      label: 'Пользователи',
     },
     {
       key: '/settings',

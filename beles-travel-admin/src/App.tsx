@@ -12,6 +12,15 @@ import ToursPage from './pages/tours/ToursPage';
 import TourFormPage from './pages/tours/TourFormPage';
 import BookingsPage from './pages/bookings/BookingsPage';
 import BookingDetailPage from './pages/bookings/BookingDetailPage';
+import CategoriesPage from './pages/categories/CategoriesPage';
+import CategoryFormPage from './pages/categories/CategoryFormPage';
+import GalleryPage from './pages/gallery/GalleryPage';
+import CustomersPage from './pages/customers/CustomersPage';
+import CustomerDetailPage from './pages/customers/CustomerDetailPage';
+import MessagesPage from './pages/messages/MessagesPage';
+import SettingsPage from './pages/settings/SettingsPage';
+import UsersPage from './pages/users/UsersPage';
+import UserFormPage from './pages/users/UserFormPage';
 import { ROUTES } from './constants/routes';
 
 // Create React Query client
@@ -24,13 +33,6 @@ const queryClient = new QueryClient({
     },
   },
 });
-
-// Placeholder pages
-const CategoriesPage = () => <div><h2>Управление категориями</h2><p>Скоро будет...</p></div>;
-const GalleryPage = () => <div><h2>Управление галереей</h2><p>Скоро будет...</p></div>;
-const CustomersPage = () => <div><h2>Управление клиентами</h2><p>Скоро будет...</p></div>;
-const MessagesPage = () => <div><h2>Сообщения</h2><p>Скоро будет...</p></div>;
-const SettingsPage = () => <div><h2>Настройки</h2><p>Скоро будет...</p></div>;
 
 function App() {
   return (
@@ -57,9 +59,15 @@ function App() {
                 <Route path={ROUTES.BOOKINGS} element={<BookingsPage />} />
                 <Route path={ROUTES.BOOKING_DETAIL} element={<BookingDetailPage />} />
                 <Route path={ROUTES.CATEGORIES} element={<CategoriesPage />} />
+                <Route path={ROUTES.CATEGORY_CREATE} element={<CategoryFormPage />} />
+                <Route path={ROUTES.CATEGORY_EDIT} element={<CategoryFormPage />} />
                 <Route path={ROUTES.GALLERY} element={<GalleryPage />} />
                 <Route path={ROUTES.CUSTOMERS} element={<CustomersPage />} />
+                <Route path={ROUTES.CUSTOMER_DETAIL} element={<CustomerDetailPage />} />
                 <Route path={ROUTES.MESSAGES} element={<MessagesPage />} />
+                <Route path={ROUTES.USERS} element={<UsersPage />} />
+                <Route path={ROUTES.USER_CREATE} element={<UserFormPage />} />
+                <Route path={ROUTES.USER_EDIT} element={<UserFormPage />} />
                 <Route path={ROUTES.SETTINGS} element={<SettingsPage />} />
               </Route>
 
